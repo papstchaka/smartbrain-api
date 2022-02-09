@@ -2,7 +2,7 @@ const express = require("express");
 const bcrypt = require("bcrypt-nodejs");
 const cors = require("cors");
 const knex = require('knex');
-const RateLimit = require('express-rate-limit');
+var RateLimit = require('express-rate-limit');
 
 const register = require('./controllers/register');
 const signin = require('./controllers/signin');
