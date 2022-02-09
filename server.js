@@ -11,7 +11,7 @@ const image = require('./controllers/image');
 const index = require('./controllers/index')
 
 // set up rate limiter: maximum of five requests per minute
-const limiter = new RateLimit({
+var limiter = new RateLimit({
   windowMs: 1*60*1000, // 1 minute
   max: 5
 });
