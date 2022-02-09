@@ -2,7 +2,7 @@ const express = require("express");
 const bcrypt = require("bcrypt-nodejs");
 const cors = require("cors");
 const knex = require('knex');
-var RateLimit = require('express-rate-limit');
+const RateLimit = require('express-rate-limit');
 
 const register = require('./controllers/register');
 const signin = require('./controllers/signin');
@@ -11,7 +11,7 @@ const image = require('./controllers/image');
 const index = require('./controllers/index')
 
 // set up rate limiter: maximum of five requests per minute
-var limiter = new RateLimit({
+const limiter = RateLimit({
   windowMs: 1*60*1000, // 1 minute
   max: 5
 });
