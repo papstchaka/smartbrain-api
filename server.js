@@ -2,12 +2,19 @@ const express = require("express");
 const bcrypt = require("bcrypt-nodejs");
 const cors = require("cors");
 const knex = require('knex');
+const RateLimit = require('express-rate-limit');
 
 const register = require('./controllers/register');
 const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 const index = require('./controllers/index')
+
+// set up rate limiter: maximum of five requests per minute
+const limiter = new RateLimit({
+  windowMs: 1*60*1000, // 1 minute
+  max: 5
+});
 
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 const db = knex({
@@ -22,6 +29,7 @@ const db = knex({
 const app = express();
 app.use(express.json())
 app.use(cors());
+app.use(limiter);
 
 app.get('/', (req,res) => index.handleIndex(req,res));
 
