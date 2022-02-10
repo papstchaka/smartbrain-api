@@ -17,13 +17,13 @@ const deleteProfile = (req, res, db) => {
     db('users')
         .where('email', '=', email)
         .del()
+        .then(deleted => {
+            console.log(deleted);
+            db('login')
+                .where('email', '=', email)
+                .del()
+        })
         .then(res.status(200).json(email))
-        .catch(err => res.status(400).json('error deleting profile')
-        );
-    db('login')
-        .where('email', '=', email)
-        .del()
-        .then(res.status(200).json("profile deleted!"))
         .catch(err => res.status(400).json('error deleting profile')
         );
 }
