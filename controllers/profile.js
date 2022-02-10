@@ -19,11 +19,11 @@ const deleteProfile = (req, res, db) => {
         .del()
         .then(deleted => {
             console.log(deleted);
-            db('login')
-                .where('email', '=', email)
-                .del()
+            return db('login')
+                        .where('email', '=', email)
+                        .del()
         })
-        .then(res.status(200).json(email))
+        .then(res.status(200).json("profile deleted"))
         .catch(err => res.status(400).json('error deleting profile')
         );
 }
