@@ -13,7 +13,7 @@ const handleProfile = (req, res, db) => {
 }
 
 const deleteProfile = (req, res, db) => {
-    const { email } = req.params;
+    const { email } = req.body;
     db('users')
         .where('email', '=', email)
         .del()
