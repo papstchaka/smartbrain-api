@@ -14,10 +14,10 @@ const handleApiCall = (req, res) => {
 }
 
 const handleImage = (req, res, db) => {
-    const { id } = req.body;
+    const { id, detected } = req.body;
     db('users')
         .where('id', '=', id)
-        .increment('entries', 1)
+        .increment('entries', detected)
         .returning('entries')
         .then(entries => {
             res.json(entries[0]);
