@@ -12,6 +12,18 @@ const handleProfile = (req, res, db) => {
         });
 }
 
+const getScoreBoard = (req, res, db) => {
+    db
+        .select("*").from('users')
+        .then(data => {
+            if (data.length) {
+                res.json(data)
+            } else {
+                res.status(400).json("Not found");
+            }
+        });
+}
+
 const deleteProfile = (req, res, db) => {
     const { email } = req.body;
     db('users')
@@ -30,5 +42,6 @@ const deleteProfile = (req, res, db) => {
 
 module.exports = {
     handleProfile: handleProfile,
+    getScoreBoard: getScoreBoard,
     deleteProfile: deleteProfile
 };
