@@ -12,6 +12,22 @@ const handleProfile = (req, res, db) => {
         });
 }
 
+const handleProfileUpdate = (req, res, db) => {
+    const { id } = req.params
+    const { name } = req.body.formInput
+    db('users')
+        .where({ id })
+        .update({ name: name })
+        .then(resp => {
+        if (resp) {
+            res.json("success")
+        } else {
+            res.status(400).json('Not found')
+        }
+        })
+        .catch(err => res.status(400).json('error updating user'))
+}
+
 const getScoreBoard = (req, res, db) => {
     db
         .select("*").from('users')
@@ -42,6 +58,7 @@ const deleteProfile = (req, res, db) => {
 
 module.exports = {
     handleProfile: handleProfile,
+    handleProfileUpdate: handleProfileUpdate,
     getScoreBoard: getScoreBoard,
     deleteProfile: deleteProfile
 };
