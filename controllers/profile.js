@@ -13,19 +13,19 @@ const handleProfile = (req, res, db) => {
 }
 
 const handleProfileUpdate = (req, res, db) => {
-    const { id } = req.params
-    const { name } = req.body.formInput
+    const { id } = req.params;
+    const { name } = req.body;
     db('users')
         .where({ id })
         .update({ name: name })
         .then(resp => {
         if (resp) {
-            res.json("success")
+            res.json("success");
         } else {
-            res.status(400).json('Not found')
+            res.status(400).json('Not found');
         }
         })
-        .catch(err => res.status(400).json('error updating user'))
+        .catch(err => res.status(400).json('error updating user'));
 }
 
 const getScoreBoard = (req, res, db) => {
