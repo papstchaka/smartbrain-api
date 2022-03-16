@@ -39,7 +39,7 @@ app.post('/register', (req,res) => register.handleRegister(req, res, db, bcrypt)
 
 app.get('/profile/:id', (req,res) => profile.handleProfile(req, res, db));
 
-app.post('/profile/:id', (req, res) => { profile.handleProfileUpdate(req, res, db)})
+app.post('/profile/:id', (req, res) => profile.handleProfileUpdate(req, res, db));
 
 app.get('/scoreboard', (req,res) => profile.getScoreBoard(req, res, db));
 
