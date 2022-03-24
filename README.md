@@ -1,4 +1,23 @@
 # smartbrain-api
+
+<p align="center">
+    <p align="center">
+        <a href="https://github.com/papstchaka/smartbrain-api/actions">
+          <img alt="Code Quality" src="https://github.com/papstchaka/smartbrain-api/actions/workflows/codeql-analysis.yml/badge.svg"/>
+        </a>
+        <a href="https://github.com/papstchaka/smartbrain-api/issues">
+          <img alt="Issues" src="https://img.shields.io/github/issues/papstchaka/smartbrain-api?color=0088ff"/>
+        </a>
+        <a href="https://github.com/papstchaka/smartbrain-api/pulls">
+          <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/papstchaka/smartbrain-api?color=0088ff"/>
+        </a>
+    </p>
+</p>
+
+---
+
+<br></br>
+
 Backend API for the smartbrain project
 
 Implementing the server that is running in the background to serve the routes and endpoints for the frontend - which is implemented in <a href="https://github.com/papstchaka/smartbrain" target="_blank">Smart Brain</a>.
