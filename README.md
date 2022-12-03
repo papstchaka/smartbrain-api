@@ -1,5 +1,7 @@
 # smartbrain-api
 
+**<span style="color:red">Please note that this app is no longer working/maintained due to <a href="https://devcenter.heroku.com/changelog-items/2461">Heroku's decision</a> - where this backend was hosted - to shut down any previously free resources from 28/11/2022 onwoards</span>**
+
 <p align="center">
     <p align="center">
         <a href="https://github.com/papstchaka/smartbrain-api/actions">
@@ -19,8 +21,6 @@
 <br></br>
 
 Backend API for the smartbrain project
-
-**Please note that this app is no longer working/maintained due to [Heroku's decision](https://devcenter.heroku.com/changelog-items/2461) - where the corresponding backend was hosted - to shut down any previously free resources from 22/11/28 onwoards**
 
 Implementing the server that is running in the background to serve the routes and endpoints for the frontend - which is implemented in <a href="https://github.com/papstchaka/smartbrain" target="_blank">Smart Brain</a>.
 
