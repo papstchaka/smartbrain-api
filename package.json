@@ -9,18 +9,18 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ansi-regex": "^6.0.1",
-    "bcrypt-nodejs": "0.0.3",
+    "ansi-regex": "^6.1.0",
+    "bcryptjs": "^3.0.3",
     "clarifai": "^2.9.1",
     "cors": "^2.8.5",
-    "debug": "^4.3.4",
-    "express": "^4.22.1",
-    "express-rate-limit": "^6.2.0",
-    "got": "^12.5.3",
-    "knex": "^2.4.0",
-    "pg": "^8.3.0"
+    "debug": "^4.4.3",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.2.1",
+    "got": "^14.6.6",
+    "knex": "^3.1.0",
+    "pg": "^8.17.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "nodemon": "^3.1.10"
   }
 }
